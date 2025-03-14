@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/* 서브페이지 서식 */
+
+:root{
+  --bg_color_gray:#eeeeee;
+}
+
+/* 서브페이지 서식 */
+.title_back{
+  background:url('http://kokoroko.dothome.co.kr/0311/images/sub_bg1.jpg');
+  background-position:0px -240px;
+  height:250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main .con nav{
+  height:50px;
+  background:var(--bg_color_gray);
+}
+
+/* 게시판 콘텐츠 가운데 정렬 */
+main .con article{
+  width: 1200px ;
+  margin: 0 auto;
+
+}
+main .con h2{display:none;}
+.con ul{
+  width:230px;
+  margin:0 auto;
+  display:flex;
+  justify-content: center;
+}
+.con ul li{line-height:50px; padding: 0px 10px;}
+.con ul li:first-child a{
+  color:#f36f21;
+}
+/* ::after와 display: block;으로 빈 공간 만들어서 선 넣어주기 */
+.con ul li:first-child a::after{
+  border-right:1px solid #333;
+  content:"";
+  position:relative;right:-26px;
+}

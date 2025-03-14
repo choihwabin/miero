@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+/* base.css */
+/* 폰트, 크기 ,색상 링크 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+:root{
+  --base_txt_color3:#333;
+  --base_font_size:15px;
+}
+
+body{
+  font-family: 'Noto Sans KR', "맑은 고딕", arial, sans-serif;
+  font-size: var(--base_font_size);
+  color: var(--base_txt_color3);
+}
+
+a{
+  font-size: var(--base_font_size);
+  color: var(--base_txt_color3);
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+
+iframe{border: none;}

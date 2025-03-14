@@ -1,0 +1,334 @@
+@charset "utf-8";
+
+/* main.css */
+
+:root{
+  --t_color:#333;
+  --m_color:#f36f21;
+  --w_color:#fff;
+}
+
+/*6. 미에로화이바 갤러리 서식*/
+body{
+  /*사용자간의 컴퓨터에 글꼴이 없는 경유를 대비하여 대체글꼴을 설정함. */
+  font-family: "맑은 고딕", arial, sans-serif;
+  font-size: 13px;
+  color: var(--t_color)
+}
+
+a{
+  color: var(--t_color);
+  text-decoration: none; /* 밑줄없음*/
+}
+
+/* 메인슬라이드 */
+#mslide{
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+#mslide div{
+  width: 100%;
+  position: absolute;} /*포지션을 주면 가로크기를 줄 것*/
+#mslide .slide1{z-index: 3;}
+#mslide .slide2{z-index: 2;}
+#mslide .slide3{z-index: 1;}
+#mslide div img{width: 100%;}
+
+/* sns아이콘서식 */
+.sns1{
+  position: absolute;
+  left: 3%;
+  top: 560px;
+  z-index: 100;
+}
+.sns1 i.fa-brands{
+  font-size: 1.25rem;
+  color: var(--w_color);
+  border: 1px solid var(--w_color);
+  padding: 8px 8px;
+  transition: 0.5s;
+}
+.sns1 a:hover i.fa-brands{
+  background: var(--w_color);
+  color: var(--m_color);
+}
+
+/* 좌우버튼 서식 */
+#mslide .l_btn, #mslide .r_btn{
+  position: absolute;
+  bottom: 25%; left: 3.5%;
+  z-index: 500;
+  background: var(--w_color);
+  padding: 6px 0px;
+  border: 1px solid var(--w_color);
+}
+#mslide .r_btn{left: 7%;}
+
+/* 콘트롤버튼 서식 */
+#mslide .c_btn{
+  position: absolute;
+  right: 1.5%;
+  top: 45%;
+  z-index: 100;
+}
+#mslide .c_btn li{
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--w_color);
+  margin-bottom: 10px;
+}
+/* 이미지가 보일때 콘트롤버튼 색상도 같이 변하는 서식 */
+.act{
+  background: #742406 !important;
+}
+
+/* 2. news 콘텐츠 영상 */
+#news{
+  width: 1200px;
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-between;
+}
+#news article:first-child{
+  width: 640px;
+}
+#news article:first-child h2 span{
+  font-size: 20px;
+  display: block;
+}
+#news article:first-child h2 img{
+  width: 250px;
+  margin-bottom: 15px;
+}
+
+/* news 콘텐츠 notice */
+#news article:last-child{
+  width: 560px;
+  margin-left: 30px;
+}
+#news article:last-child h2 span{
+  font-size: 20px;
+  display: block;
+}
+#news article:last-child h2{
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+#news article:last-child ul{
+  width: 330px;
+  line-height: 30px;
+  font-weight: 500;
+}
+#news article:last-child ul li {
+  white-space: nowrap; 
+  overflow: hidden;   
+  text-overflow: ellipsis;
+}
+#news article:last-child ul li:first-child a{
+  font-weight: bold;
+}
+/* 기호서식 */
+i.fa-circle{
+  color: var(--m_color);
+  margin-right:10px;
+}
+
+
+/* 3. 탭콘텐츠 */
+#tab_con{
+  background: #f1f1f1;
+  padding: 100px 0px;
+}
+#tab_con h2{
+  font-size: 32px;
+  padding: 10px 0px;
+  font-weight: bold;
+}
+#tab_con > article{
+  width: 1200px;
+  height: 500px;
+  margin: 0 auto;
+  background-image: url(../images/mcon2_7.png);
+  background-repeat: no-repeat;
+  background-position: 600px 100px;
+  background-size:550px;
+  position: relative;
+}
+
+/* 탭메뉴 목록 서식 */
+#tab_con ul{
+  width: 650px;
+  display: flex;
+  position: relative;
+  margin-top: 30px;
+}
+#tab_con ul li{margin-right: 10px;}
+#tab_con ul li a{
+  background: #222;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 5px;
+}
+#tab_con ul li a:hover{text-decoration: none;}
+#tab_con dl{line-height: 160%;}
+/* 탭메뉴 클릭시 적용 할 서식 */
+.t_on{background: var(--m_color) !important;}
+
+/* 탭메뉴 박스서식 */
+#tab_con .con, i.fa-caret-down{display: none;}
+#tab_con .con1{display: block;}
+#tab_con .con{
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+}
+.con dl dt{font-size: 24px; padding-bottom: 15px;}
+.con3 img{width: 80%;}
+
+/* 제품소개 */
+#product{
+  background: #ffc845;
+  padding: 100px 0px;}
+#product article{
+  width: 1200px;
+  margin: 0 auto;
+}
+#product article h2{font-size: 32px;padding: 10px 0px;font-weight: bold;}
+#product ul{display: flex;justify-content: space-between;}
+#product ul li{width: 31%;}
+#product ul li img{width: 100%;}
+#product ul li h3{
+  font-size: 24px;
+  border-bottom: 1px solid #805a28;
+  height: 60px;
+  padding:15px 0px;
+  line-height: 30px;
+}
+#product ul li p{
+  line-height: 30px;
+  padding-top: 10px;
+  font-size: 14px;
+  color: #805a28;
+}
+
+/* 5. 좌우 이벤트슬라이드 */
+#event{
+  padding: 100px 0px;
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+#event h2{
+  font-size: 32px;
+  font-weight: bold;
+  padding: 30px 0px;
+}
+.e_slide{overflow: hidden;}
+.es_wrap{display: flex; width: 3600px;}
+.es_wrap > div{width: 1200px;}
+.es_wrap div a{display:flex; text-decoration: none;}
+.es_wrap div a img{
+  border: 1px solid #ccc;
+  padding: 4px;}
+#event i.fas{
+  position: absolute;
+  top: 272px;
+  font-size: 30px;
+  padding: 5px 12px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  transition: 0.3s;
+}
+#event i.fas:hover{color: var(--m_color);}
+#event i.fa-angle-left{left: -55px; box-shadow: 3px 4px 4px #333;}
+#event i.fa-angle-right{right: -55px; box-shadow: 3px 4px 4px #333;} 
+.e_txt{
+  padding: 30px 0px 0px 40px;
+}
+.e_txt span.on_color{
+  background: var(--m_color);
+  color: var(--w_color);
+}
+.e_txt span{background:#e4e4e4; padding: 3px 2px;}
+.e_txt h3{font-size: 18px; line-height: 60px;}
+.e_txt p{
+  color: #999999;
+  font-size: 16px;}
+
+/* 6. 갤러리*/
+#gallery{
+  background-color: var(--m_color);
+  width: 100%;
+  margin: 0px auto;
+  padding: 100px 0px;
+}
+
+.grid_gallery, #gallery > h2{
+  width: 1200px;
+  margin: 0px auto;
+}
+
+#gallery > h2{
+  padding: 0px 0px 20px 0px;
+  font-size: 32px;
+  color: #fff;
+}
+
+/* grid gallery */
+.grid_gallery{
+  display: grid;
+  grid-gap: 20px;
+  padding: 20px;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, 270px);
+  grid-template-areas: 
+  "g01 g02 g03"
+  "g04 g02 g05"
+  "g06 g07 g08";
+}
+
+.grid_gallery > figure:first-child{grid-area: g01;}
+.grid_gallery > figure:nth-child(2){grid-area:g02;}
+.grid_gallery > figure:nth-child(3){grid-area:g03;}
+.grid_gallery > figure:nth-child(4){grid-area:g04;}
+.grid_gallery > figure:nth-child(5){grid-area:g05;}
+.grid_gallery > figure:nth-child(6){grid-area:g06;}
+.grid_gallery > figure:nth-child(7){grid-area:g07;}
+.grid_gallery > figure:last-child{grid-area:g08;}
+
+.grid_gallery img{width: 100%;}
+.grid_gallery > figure{overflow: hidden;position: relative;}
+
+.grid_gallery > figure:hover figcaption{
+  bottom: 0px;
+}
+
+/* 캡션서식 */
+.grid_gallery > figure > figcaption{
+  background-color: #000;
+  height: 80px;
+  position: absolute; bottom: -80px;
+  width: 100%;
+  transition: 0.5s; /* 시간(전환)속성 */
+}
+
+figcaption h3{color: var(--m_color);
+  font-size: 20px;
+  padding: 10px 0px 5px 20px;
+}
+figcaption p{
+  color: #fff;
+  font-size: 16px;
+  padding: 5px 0px 0px 20px;
+}
+
+figcaption span{
+  font-size: 16px;
+  color: #fff;
+  padding: 5px;
+  float: right;
+  transform: translate(-10px, -14px);
+}
